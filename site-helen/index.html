@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Helen Araújo - Advocacia Especializada e Consultoria Jurídica. Soluções éticas e eficientes.">
+    <title>Helen Araújo | Advocacia Especializada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS: O Estilo Visual --- */
+        :root {
+            --primary-color: #1a2a3a; /* Azul Marinho Profundo (Sobriedade) */
+            --accent-color: #c5a059;  /* Dourado (Elegância/Justiça) */
+            --text-light: #f4f4f4;
+            --text-dark: #333;
+            --bg-light: #fff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav a { color: var(--text-light); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent-color); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 42, 58, 0.9), rgba(26, 42, 58, 0.8)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+        }
+
+        .hero h1 { color: var(--text-light); font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn:hover { background-color: transparent; color: var(--accent-color); }
+
+        /* Sections */
+        .section { padding: 80px 5%; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; position: relative; }
+        .section-title::after {
+            content: ''; display: block; width: 60px; height: 3px; background: var(--accent-color); margin: 15px auto 0;
+        }
+
+        /* Sobre */
+        .about-container { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; }
+        .about-text { flex: 1; min-width: 300px; max-width: 600px; }
+        .about-img { 
+            width: 300px; height: 300px; 
+            background-color: #ddd; /* Placeholder para foto */
+            border-radius: 50%; 
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+        }
+
+        /* Áreas de Atuação */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .service-card {
+            background: #f9f9f9; padding: 30px; border-left: 4px solid var(--accent-color);
+            transition: 0.3s;
+        }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.3rem; }
+
+        /* Contato */
+        .contact { background-color: #f4f4f4; text-align: center; }
+        .contact-info { margin-bottom: 30px; }
+
+        /* Footer */
+        footer { background-color: var(--primary-color); color: var(--text-light); text-align: center; padding: 20px; font-size: 0.8rem; }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav ul { display: none; } /* Simplificação para mobile por enquanto */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Helen Araújo</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#atuacao">Atuação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <h1>Defesa de Direitos com Excelência</h1>
+            <p>Advocacia estratégica e consultiva focada em resultados e segurança jurídica.</p>
+            <a href="https://wa.me/5592000000000" class="btn" target="_blank">Agendar Consulta</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <h2 class="section-title">Sobre a Advogada</h2>
+        <div class="about-container">
+            <img src="https://via.placeholder.com/300" alt="Dra. Helen Araújo" class="about-img">
+            <div class="about-text">
+                <h3>Helen Araújo</h3>
+                <p><strong>OAB/AM XX.XXX</strong></p>
+                <br>
+                <p>Com sólida experiência jurídica e uma visão voltada para a inovação, atuo na defesa dos interesses de meus clientes com ética e combatividade.</p>
+                <br>
+                <p>Acredito que a advocacia moderna exige não apenas conhecimento técnico, mas também um entendimento profundo das necessidades de cada cliente, seja ele um indivíduo ou uma empresa em crescimento.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="atuacao" class="section">
+        <h2 class="section-title">Áreas de Atuação</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Direito Civil</h3>
+                <p>Resolução de conflitos, contratos, responsabilidade civil e indenizações.</p>
+            </div>
+            <div class="service-card">
+                <h3>Direito Empresarial</h3>
+                <p>Consultoria para startups e empresas, compliance e gestão de riscos jurídicos.</p>
+            </div>
+            <div class="service-card">
+                <h3>Direito de Família</h3>
+                <p>Divórcios, guarda, pensão e inventários com abordagem humanizada.</p>
+            </div>
+            <div class="service-card">
+                <h3>Consultoria Jurídica</h3>
+                <p>Pareceres e orientações preventivas para evitar litígios futuros.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section contact">
+        <h2 class="section-title">Fale Conosco</h2>
+        <div class="contact-info">
+            <p>Precisa de orientação jurídica? Entre em contato agora.</p>
+            <p>Manaus - AM</p>
+        </div>
+        <a href="https://wa.me/5592000000000" class="btn" target="_blank">
+            <svg style="width:20px; vertical-align:middle; margin-right:5px;" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.005.572 1.968.874 3.146.874 3.183 0 5.769-2.587 5.769-5.766-.001-3.181-2.584-5.768-5.764-5.768zm0 10.375c-1.045 0-1.876-.276-2.757-.751l-1.97.517.527-1.922c-.527-.927-.801-1.785-.801-2.836 0-2.53 2.057-4.589 4.587-4.589 2.53 0 4.589 2.058 4.589 4.588 0 2.531-2.058 4.59-4.589 4.59z"/></svg>
+            Chamar no WhatsApp
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Helen Araújo Advocacia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll simples
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
